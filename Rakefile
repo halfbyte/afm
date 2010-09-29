@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "afm"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{reading Adobe Font Metrics (afm) files}
+    gem.description = %Q{a simple library to read afm files and use the data conveniently}
     gem.email = "jan@krutisch.de"
     gem.homepage = "http://github.com/halfbyte/afm"
     gem.authors = ["Jan Krutisch"]
