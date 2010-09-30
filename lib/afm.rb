@@ -1,7 +1,40 @@
-
 module AFM
+  
+  ISO_LATIN1_ENCODING = %w(
+   .notdef .notdef .notdef .notdef .notdef .notdef .notdef .notdef
+   .notdef .notdef .notdef .notdef .notdef .notdef .notdef .notdef
+   .notdef .notdef .notdef .notdef .notdef .notdef .notdef .notdef
+   .notdef .notdef .notdef .notdef .notdef .notdef .notdef .notdef space
+   exclam quotedbl numbersign dollar percent ampersand quoteright
+   parenleft parenright asterisk plus comma minus period slash zero one
+   two three four five six seven eight nine colon semicolon less equal
+   greater question at A B C D E F G H I J K L M N O P Q R S
+   T U V W X Y Z bracketleft backslash bracketright asciicircum
+   underscore quoteleft a b c d e f g h i j k l m n o p q r s
+   t u v w x y z braceleft bar braceright asciitilde .notdef .notdef
+   .notdef .notdef .notdef .notdef .notdef .notdef .notdef .notdef
+   .notdef .notdef .notdef .notdef .notdef .notdef .notdef dotlessi grave
+   acute circumflex tilde macron breve dotaccent dieresis .notdef ring
+   cedilla .notdef hungarumlaut ogonek caron space exclamdown cent
+   sterling currency yen brokenbar section dieresis copyright ordfeminine
+   guillemotleft logicalnot hyphen registered macron degree plusminus
+   twosuperior threesuperior acute mu paragraph periodcentered cedilla
+   onesuperior ordmasculine guillemotright onequarter onehalf threequarters
+   questiondown Agrave Aacute Acircumflex Atilde Adieresis Aring AE
+   Ccedilla Egrave Eacute Ecircumflex Edieresis Igrave Iacute Icircumflex
+   Idieresis Eth Ntilde Ograve Oacute Ocircumflex Otilde Odieresis
+   multiply Oslash Ugrave Uacute Ucircumflex Udieresis Yacute Thorn
+   germandbls agrave aacute acircumflex atilde adieresis aring ae
+   ccedilla egrave eacute ecircumflex edieresis igrave iacute icircumflex
+   idieresis eth ntilde ograve oacute ocircumflex otilde odieresis divide
+   oslash ugrave uacute ucircumflex udieresis yacute thorn ydieresis
+  )
+  
+  
   class Font
     attr_reader :metadata, :char_metrics, :kern_pairs
+    
+    # Loading a Font Metrics file by absolute path (no automatic font path resolution)
     def initialize(filename)
       @metadata = {}
       @char_metrics = {}
@@ -40,6 +73,31 @@ module AFM
           end
         end
       end
+    end
+    
+    # 
+    # alias for new()
+    def self.from_file(file)
+      self.new(file)
+    end
+    
+    #
+    # Get metadata by key
+    def [](key)
+      @metadata[key]
+    end
+    #
+    # Get metrics for character. Takes an integer (charcode) or
+    # a one-char string. currently works only for Latin1 strings,
+    # since we only have a chartable for the Latin1 charset so far.
+    # (shamelessly stolen from AFM.pm by Gisle Aas)
+    def metrics_for(char)
+      glyph = if (char.kind_of?(Integer))
+        ISO_LATIN1_ENCODING[char]
+      else
+        ISO_LATIN1_ENCODING[char[0]]
+      end
+      @char_metrics[glyph]
     end
   end
 end

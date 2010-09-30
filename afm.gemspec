@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "afm.gemspec",
      "lib/afm.rb",
      "test/fixtures/Vera.afm",
      "test/helper.rb",
