@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'bundler/setup'
 require 'rake'
 
 begin
@@ -10,7 +11,7 @@ begin
     gem.email = "jan@krutisch.de"
     gem.homepage = "http://github.com/halfbyte/afm"
     gem.authors = ["Jan Krutisch"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_development_dependency "shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
@@ -38,7 +39,7 @@ rescue LoadError
   end
 end
 
-task :test => :check_dependencies
+
 
 task :default => :test
 

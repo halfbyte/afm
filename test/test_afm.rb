@@ -8,6 +8,7 @@ class TestAfm < Test::Unit::TestCase
   
   should "set metadata" do
     assert_equal "BitstreamVeraSans-Roman", @font.metadata['FontName']
+    assert_equal "BitstreamVeraSans-Roman", @font['FontName']
   end
   should "set char_metrics" do
     assert_equal 400, @font.char_metrics['exclam'][:wx]
@@ -21,5 +22,5 @@ class TestAfm < Test::Unit::TestCase
   should "open font with alternative method" do
     assert_not_nil AFM::Font.from_file(File.join(File.dirname(__FILE__), 'fixtures', 'Vera.afm'))
   end
-  
+    
 end
