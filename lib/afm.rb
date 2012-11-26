@@ -99,5 +99,13 @@ module AFM
       end
       @char_metrics[glyph]
     end
+
+    # Get metrics for character, looking it up by the adobe name. Takes a string.
+    #
+    #   metrics_for_name(:A)
+    #   => {:charcode=>174, :wx=>556, :boundingbox=>[14, 0, 536, 691]}
+    def metrics_for_name(name)
+      @char_metrics[name.to_s]
+    end
   end
 end
