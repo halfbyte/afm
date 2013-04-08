@@ -12,6 +12,7 @@ begin
     gem.homepage = "http://github.com/halfbyte/afm"
     gem.authors = ["Jan Krutisch"]
     gem.add_development_dependency "shoulda", ">= 0"
+    gem.add_development_dependency "rdoc", ">= 2.4.2"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
@@ -43,7 +44,7 @@ end
 
 task :default => :test
 
-require 'rake/rdoctask'
+require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
