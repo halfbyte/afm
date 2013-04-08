@@ -14,6 +14,10 @@ class TestAfm < Test::Unit::TestCase
     assert_equal 400, @font.char_metrics['exclam'][:wx]
     assert_equal [85, -131, 310, 758], @font.char_metrics['parenleft'][:boundingbox]
   end
+  should "set char_metrics_by_code" do
+    assert_equal 400, @font.char_metrics_by_code[33][:wx]
+    assert_equal [85, -131, 310, 758], @font.char_metrics_by_code[40][:boundingbox]
+  end
   
   should "get char metrics by char" do
     assert_equal 400, @font.metrics_for("!")[:wx]

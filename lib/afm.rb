@@ -32,12 +32,13 @@ module AFM
   
   
   class Font
-    attr_reader :metadata, :char_metrics, :kern_pairs
+    attr_reader :metadata, :char_metrics, :char_metrics_by_code, :kern_pairs
     
     # Loading a Font Metrics file by absolute path (no automatic font path resolution)
     def initialize(filename)
       @metadata = {}
       @char_metrics = {}
+      @char_metrics_by_code = {}
       @kern_pairs = []
       File.open(filename) do |file|
         mode = :meta
@@ -64,7 +65,8 @@ module AFM
               if match = line.match(/B (-?\d+) (-?\d+) (-?\d+) (-?\d+) *?;/)
                 metrics[:boundingbox] = [match[1].to_i, match[2].to_i, match[3].to_i, match[4].to_i] 
               end
-              @char_metrics[metrics.delete(:name)] = metrics if metrics[:name]
+              @char_metrics[metrics[:name]] = metrics if metrics[:name]
+              @char_metrics_by_code[metrics[:charcode]] = metrics if metrics[:charcode] && metrics[:charcode] > 0
             when :kern_pairs
               if match = line.match(/^KPX ([.\w]+) ([.\w]+) (-?\d+)$/)
                 @kern_pairs << [match[1], match[2], match[3].to_i]
