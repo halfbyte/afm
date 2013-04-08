@@ -97,7 +97,7 @@ module AFM
       glyph = if (char.kind_of?(Integer))
         ISO_LATIN1_ENCODING[char]
       else
-        ISO_LATIN1_ENCODING[char[0]]
+        ISO_LATIN1_ENCODING[char.unpack("C*").first]
       end
       @char_metrics[glyph]
     end
