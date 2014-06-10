@@ -11,6 +11,7 @@ begin
     gem.email = "jan@krutisch.de"
     gem.homepage = "http://github.com/halfbyte/afm"
     gem.authors = ["Jan Krutisch"]
+    gem.add_development_dependency "minitest", ">= 5.0.0"
     gem.add_development_dependency "shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end

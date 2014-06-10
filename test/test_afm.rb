@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestAfm < Test::Unit::TestCase
+class TestAfm < Minitest::Test
   
   def setup
     @font = AFM::Font.new(File.join(File.dirname(__FILE__), 'fixtures', 'Vera.afm'))
@@ -24,7 +24,7 @@ class TestAfm < Test::Unit::TestCase
   end
   
   should "open font with alternative method" do
-    assert_not_nil AFM::Font.from_file(File.join(File.dirname(__FILE__), 'fixtures', 'Vera.afm'))
+    assert !AFM::Font.from_file(File.join(File.dirname(__FILE__), 'fixtures', 'Vera.afm')).nil?
   end
     
 end
