@@ -17,8 +17,10 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "CHANGELOG.md",
     "lib/*.rb",
-    "test/*"
+    "test/*",
+    "test/fixtures/*"
   ]
   s.homepage = %q{http://github.com/halfbyte/afm}
   s.require_paths = ["lib"]
