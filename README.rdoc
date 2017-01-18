@@ -17,4 +17,4 @@ Currently simply parses the file and saves it in a few attributes.
 
 == Copyright
 
-Copyright (c) 2010 Jan Krutisch. See LICENSE for details.
+Copyright (c) 2010-2016 Jan Krutisch. See LICENSE for details.
