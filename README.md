@@ -1,11 +1,12 @@
-= afm
+# afm
 
 A very simple library to read Adobe Font Metrics files (afm).
 
 Currently simply parses the file and saves it in a few attributes.
 
+[![Depfu Status](https://depfu.com/badge/halfbyte/afm)](https://depfu.com)
 
-== Note on Patches/Pull Requests
+## Note on Patches/Pull Requests
 
 * Fork the project.
 * Make your feature addition or bug fix.
@@ -15,6 +16,6 @@ Currently simply parses the file and saves it in a few attributes.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-== Copyright
+## Copyright
 
-Copyright (c) 2010 Jan Krutisch. See LICENSE for details.
+Copyright (c) 2010-2017 Jan Krutisch. See LICENSE for details.
