@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.6.2}
   s.summary = %q{reading Adobe Font Metrics (afm) files}
   s.license = "MIT"
-  s.add_development_dependency "rake", "~> 10.3"
+  s.add_development_dependency "rake", "~> 12.2"
   s.add_development_dependency "rdoc", "~> 4.1"
   s.add_development_dependency "minitest", "~> 5.3"
 
