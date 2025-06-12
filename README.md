@@ -14,8 +14,8 @@ Currently simply parses the file and saves it in a few attributes.
   future version unintentionally.
 * Commit, do not mess with rakefile, version, or history.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+* Open PR
 
 ## Copyright
 
-Copyright (c) 2010-2017 Jan Krutisch. See LICENSE for details.
+Copyright (c) Jan Krutisch. See LICENSE for details.
