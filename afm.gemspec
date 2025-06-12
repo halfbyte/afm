@@ -1,13 +1,11 @@
-require 'rake'
+require "rake"
 Gem::Specification.new do |s|
-  s.name = %q{afm}
-  s.version = File.read('VERSION')
-
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
+  s.name = "afm"
+  s.version = File.read("VERSION")
   s.authors = ["Jan Krutisch"]
-  s.date = %q{2014-06-19}
-  s.description = %q{a simple library to read afm files and use the data conveniently}
-  s.email = %q{jan@krutisch.de}
+  s.summary = "reading Adobe Font Metrics (afm) files"
+  s.description = "a simple library to read afm files and use the data conveniently"
+  s.email = "jan@krutisch.de"
   s.extra_rdoc_files = [
     "LICENSE",
     "README.rdoc"
@@ -22,14 +20,10 @@ Gem::Specification.new do |s|
     "test/*",
     "test/fixtures/*"
   ]
-  s.homepage = %q{http://github.com/halfbyte/afm}
+  s.homepage = "http://github.com/halfbyte/afm"
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
-  s.summary = %q{reading Adobe Font Metrics (afm) files}
   s.license = "MIT"
-  s.add_development_dependency "rake", "~> 10.3"
-  s.add_development_dependency "rdoc", "~> 4.1"
-  s.add_development_dependency "minitest", "~> 5.3"
-
+  s.add_development_dependency "rake", "~> 13.3"
+  s.add_development_dependency "rdoc", "~> 6.14"
+  s.add_development_dependency "minitest", "~> 5.25"
 end
-
