@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.email = "jan@krutisch.de"
   s.extra_rdoc_files = [
     "LICENSE",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = file_list(
     "LICENSE",
@@ -37,4 +37,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake", "~> 13.3"
   s.add_development_dependency "rdoc", "~> 6.14"
   s.add_development_dependency "minitest", "~> 5.25"
+  s.required_ruby_version = ">= 3.2.0"
 end

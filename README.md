@@ -4,7 +4,7 @@ A very simple library to read Adobe Font Metrics files (afm).
 
 Currently simply parses the file and saves it in a few attributes.
 
-[![Depfu Status](https://depfu.com/badge/halfbyte/afm)](https://depfu.com)
+[![Depfu](https://badges.depfu.com/badges/041c6aa5c0e500265a3ef0e499008c0f/overview.svg)](https://depfu.com/github/halfbyte/afm?project_id=139)
 
 ## Note on Patches/Pull Requests
 
