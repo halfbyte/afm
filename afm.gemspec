@@ -24,12 +24,9 @@ Gem::Specification.new do |s|
   s.files = file_list(
     "LICENSE",
     "README.md",
-    "Rakefile",
     "VERSION",
     "CHANGELOG.md",
-    "lib/*.rb",
-    "test/*",
-    "test/fixtures/*"
+    "lib/*.rb"
   )
   s.homepage = "http://github.com/halfbyte/afm"
   s.require_paths = ["lib"]
