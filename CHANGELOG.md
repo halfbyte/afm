@@ -1,3 +1,8 @@
+## 1.0.1
+
+Reduces file size by a considerable amount by leaving out test data, tests
+and the rakefile. (Hat tip to @yuri-zubov for noticing)
+
 ## 1.0.0
 
 There are no functional changes to 0.2.2 in this release, it is just a quick
